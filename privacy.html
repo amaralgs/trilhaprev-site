@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrilhaPrev – Política de Privacidade</title>
+<meta name="description" content="Política de privacidade do TrilhaPrev: o que o app guarda, o que nunca guarda, como os dados são cifrados e como excluir a sua conta.">
+<link rel="canonical" href="https://trilhaprev.werker.com.br/privacy.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar"><div class="in">
+  <a class="brand" href="./"><img src="icon.png" alt="" width="26" height="26">TrilhaPrev</a>
+  <nav aria-label="Principal"><a href="./">Início</a><a href="about.html">Sobre</a></nav>
+</div></header>
+<main class="page">
+  <h1>TrilhaPrev – Política de Privacidade</h1>
+  <p class="meta">Última atualização: 17 de novembro de 2026 · Responsável: Gilberto Amaral · Contato: <a href="mailto:contato@amaral.pro">contato@amaral.pro</a></p>
+
+  <h2>Em resumo</h2>
+  <p>O TrilhaPrev é um simulador de aposentadoria. Os seus dados financeiros e pessoais são <strong>cifrados no seu aparelho, antes de saírem dele</strong>, com uma chave que só você controla. O servidor do app guarda apenas blocos ilegíveis: nem o desenvolvedor consegue ler o seu plano. <strong>Não guardamos seu e-mail nem dados pessoais.</strong></p>
+  <p>Todos os cálculos acontecem no seu aparelho. O servidor não calcula nada.</p>
+
+  <h2>O que guardamos</h2>
+  <ul>
+    <li><strong>Um identificador anônimo da conta.</strong> Ao entrar com Google ou Apple, guardamos apenas um código derivado do identificador que o provedor nos informa (um hash calculado com um segredo do servidor). Não guardamos o seu e-mail, nome ou foto, mesmo que o provedor os envie.</li>
+    <li><strong>Blocos cifrados.</strong> Seu plano (carteira, FGTS, salário, premissas, histórico, perfis) fica num bloco ilegível sem a sua chave. O servidor guarda as últimas 10 versões de cada bloco, para que um erro de sincronização possa ser desfeito.</li>
+    <li><strong>Seu pacote de chaves.</strong> É a sua chave de dados embrulhada pela sua senha de dados e pela sua chave de recuperação. O servidor não consegue abri-lo sem a sua senha.</li>
+    <li><strong>Metadados técnicos.</strong> Os identificadores dos blocos (por exemplo, quantos perfis você tem), os tamanhos e as datas das versões.</li>
+  </ul>
+
+  <h2>O que fica dentro do bloco cifrado (só você lê)</h2>
+  <p>Mês e ano de nascimento (não o dia), sexo (usado no cálculo atuarial), um apelido opcional, e o seu perfil financeiro: carteira, FGTS, salário, premissas, plano e histórico. Valores em moeda estrangeira são guardados como quantidade, e o valor em reais é calculado no seu aparelho.</p>
+
+  <h2>O que nunca coletamos</h2>
+  <p>Nome, CPF, endereço, telefone, e-mail, números de conta, chaves bancárias ou qualquer dado de pagamento.</p>
+
+  <h2>Atenção: a sua chave</h2>
+  <p>Se você perder a senha de dados e a chave de recuperação, <strong>ninguém consegue recuperar os seus dados, nem o desenvolvedor</strong>. É uma escolha consciente: é o que garante que apenas você os leia. O app avisa isso na criação da conta.</p>
+
+  <h2>Registros do servidor</h2>
+  <p>O servidor não registra endereço IP, e-mail, tokens nem o conteúdo das requisições. Os registros de acesso guardam apenas data, rota, código de resposta e tempo, sem IP e sem parâmetros.</p>
+
+  <h2>Dados públicos</h2>
+  <p>O servidor busca cotações (dólar, euro, cripto) e o índice de inflação (IPCA) em fontes públicas e as repassa ao app. Essas consultas são feitas sem nenhuma informação sua. O app só se comunica com o servidor do TrilhaPrev.</p>
+
+  <h2>Entrar com Google e com Apple</h2>
+  <p>O login é feito pelo Google ou pela Apple, que sabem que você usa o TrilhaPrev para entrar e tratam esses dados segundo as próprias políticas. Não prometemos anonimato absoluto perante eles. O app só usa o identificador que eles informam; o e-mail e o nome não são lidos nem guardados.</p>
+
+  <h2>Neste aparelho</h2>
+  <p>Uma cópia cifrada dos seus dados fica no aparelho, para que o app funcione sem internet. Se você marcar “Lembrar neste aparelho”, a chave de dados é guardada no Chaveiro do iOS, protegida por Face ID ou Touch ID e só neste aparelho. Sem Face ID ou Touch ID, o app não lembra a chave e pede a senha a cada abertura.</p>
+
+  <h2>Cópias de segurança</h2>
+  <p>O servidor faz cópias periódicas dos blocos cifrados. Elas ficam até 7 dias no servidor e até 35 dias num armazenamento externo, e continuam ilegíveis sem as suas chaves. Ao excluir a conta, os dados saem do servidor na hora; as cópias de segurança cifradas são apagadas em até 35 dias. Mantemos por 40 dias apenas o código aleatório da conta excluída, para que uma eventual restauração de backup não a traga de volta.</p>
+
+  <h2>Excluir a sua conta</h2>
+  <p>No app, em Configurações, “Excluir minha conta” apaga a sua conta, o pacote de chaves e todos os blocos e versões do servidor, e limpa os dados deste aparelho. Em outros aparelhos onde você entrou, a sessão deixa de valer, mas a cópia cifrada local permanece até você sair do app ou apagar os dados do app naquele aparelho.</p>
+
+  <h2>Anúncios e compras</h2>
+  <p>A versão atual não tem anúncios nem compras. Se isso mudar (por exemplo, anúncios na versão gratuita e uma assinatura sem anúncios), esta política será atualizada antes e o app informará, e as compras seriam processadas pela Apple, sem que o desenvolvedor receba dados de pagamento.</p>
+
+  <h2>Seus direitos (LGPD)</h2>
+  <p>Como o desenvolvedor não tem acesso ao conteúdo dos seus dados, não há o que acessar, corrigir ou apagar do nosso lado além da exclusão de conta descrita acima. Para dados mantidos pelo Google ou pela Apple, fale diretamente com eles. Pode escrever ao desenvolvedor sobre qualquer dúvida desta política.</p>
+
+  <h2>Crianças</h2>
+  <p>O TrilhaPrev não é direcionado a crianças e não coleta dados de ninguém de forma intencional.</p>
+
+  <h2>Aviso</h2>
+  <p>O TrilhaPrev é uma simulação e não é recomendação de investimento nem aconselhamento financeiro ou previdenciário. O app é oferecido “como está”. Na medida permitida pela lei, o desenvolvedor não responde por danos decorrentes do uso do app ou de práticas de terceiros mencionados aqui, sem limitar direitos que não podem ser renunciados pela legislação de defesa do consumidor.</p>
+
+  <h2>Mudanças</h2>
+  <p>Esta política pode ser atualizada; a data no topo indica a última revisão.</p>
+
+  <h2>Contato</h2>
+  <p><a href="mailto:contato@amaral.pro">contato@amaral.pro</a></p>
+</main>
+<footer><div class="wrap"><span class="grow">© 2026 Gilberto Amaral</span><a href="./">Início</a><a href="about.html">Sobre</a></div></footer>
+</body>
+</html>
